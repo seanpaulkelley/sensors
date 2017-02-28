@@ -1,5 +1,8 @@
+{{ember-chart type='line' data=valueData width=200 height=200}}
+
+
 <ul>
-  {{#each model as |reading|}}
-    {{reading-item reading=reading}}
-  {{/each}}
+  #each model as |reading|
+    reading-item reading=reading
+  /each
 </ul>
