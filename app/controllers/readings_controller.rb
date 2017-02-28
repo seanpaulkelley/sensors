@@ -3,8 +3,12 @@ class ReadingsController < ApplicationController
 
   # GET /readings
   def index
-    @readings = Reading.all
-
+    if params[:sensor_type] 
+      @readings=Reading.where(:sensor_type => params[:sensor_type])
+    else
+      @readings = Reading.all
+    end
+   
     render json: @readings
   end
 

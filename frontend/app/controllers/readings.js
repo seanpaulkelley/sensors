@@ -8,6 +8,6 @@ export default Ember.Controller.extend({
         label: 'Readings',
         data: this.get('model').mapBy('value')
       }]
-    }
+    };
   })
-})
+});
