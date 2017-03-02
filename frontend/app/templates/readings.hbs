@@ -1,4 +1,10 @@
-<h1>Sensor Readings</h1>
+<h1>{{sensor_type}} Readings</h1>
+
+{{#link-to "readings" (query-params sensor_type='air') class="btn btn-primary btn-sm" }}Air Temp (outside){{/link-to}}
+{{#link-to "readings" (query-params sensor_type='soil') class="btn btn-primary btn-sm" }}Soil Temp (worms){{/link-to}}
+{{#link-to "readings" (query-params sensor_type='grafting-humidity') class="btn btn-primary btn-sm" }}Grafting Humidity{{/link-to}}
+{{#link-to "readings" (query-params sensor_type='grafting-temperature') class="btn btn-primary btn-sm" }}Grafting Temp{{/link-to}}
+
 {{ember-chart type='line' data=valueData width=200 height=200}}
 
 

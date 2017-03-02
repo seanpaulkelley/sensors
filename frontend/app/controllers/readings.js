@@ -1,5 +1,9 @@
 import Ember from 'ember';
 export default Ember.Controller.extend({
+
+  queryParams: ['sensor_type'],
+  sensor_type: 'soil',
+
   valueData: Ember.computed('model', function(){
     
     return {
@@ -10,4 +14,5 @@ export default Ember.Controller.extend({
       }]
     };
   })
+
 });

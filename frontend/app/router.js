@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
    this.route('readings', { path: '/' });
+   //this.route('readings', { path: '/readings/:sensor_type' });
 });
 
 export default Router;
