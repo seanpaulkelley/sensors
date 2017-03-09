@@ -7,8 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-   this.route('readings', { path: '/' });
-   //this.route('readings', { path: '/readings/:sensor_type' });
+  this.route('readings', { path: '/' });
+  //this.route('readings', { path: '/readings/:sensor_type' });
+  this.route('plants', { path: '/plant-list' });
+  this.route('plantings', { path: '/plant-dates' });
 });
 
 export default Router;

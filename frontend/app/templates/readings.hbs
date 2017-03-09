@@ -9,7 +9,7 @@
 
 
 <ul>
-  #each model as |reading|
-    reading-item reading=reading
-  /each
+  {{#each model as |reading|}}
+    {{reading-item reading=reading}}
+  {{/each}}
 </ul>
