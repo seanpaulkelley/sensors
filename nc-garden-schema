@@ -1,0 +1,7 @@
+nc plant calendar db schema
+
+plantings:
+plant, days_to_harvest_from,days_to_harvest_to, distance_between_from,distance_between_to, plant_date_begin, plant_date_end, planting_type (B = bulbs; C = crowns; S = seeds; T = transplants; Tu = tubers)
+
+Activities:
+fertilize, start seeds, transplant, harvest, spray 
