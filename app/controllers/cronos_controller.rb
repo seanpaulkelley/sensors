@@ -11,11 +11,11 @@ class CronosController < ApplicationController
     # Full control
     http = Net::HTTP.new(uri.host, uri.port)
 
-    request = Net::HTTP::Post.new(uri.request_uri)
+    #@request = Net::HTTP::Post.new(uri.request_uri)
     #request.set_form_data({"user[name]" => "testusername", "user[email]" => "testemail@yahoo.com"})
 
-    response = http.request(request)
-    puts ************************ + response
-    render :json => response.body
+    #response = http.request(request)
+    #puts ************************ + response
+    #render :json => response.body
   end
 end
