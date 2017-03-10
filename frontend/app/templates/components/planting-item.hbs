@@ -1,5 +1,8 @@
 <li>
   <strong>
-    {{moment-format planting.plantingDateBegin 'MMMM D'}}: {{plant.name}}</strong>
-  - {{planting.plantingType}}
+    <!-- {{moment-format planting.plantingDateBegin 'MMMM D'}} : --> {{plant.name}}</strong>
+  <br/>
+  {{planting.plantingType}} PLANT IN GROUND: {{moment-format planting.plantingDateBegin 'MMMM D'}} - {{moment-format planting.plantingDateEnd 'MMMM D'}} HARVEST (days): {{ planting.daysToHarvestFrom }} - {{ planting.daysToHarvestTo }} Distance Between: {{ plant.distanceBetweenFrom }} - {{ plant.distanceBetweenTo }}
+  <br/>
+  
 </li>

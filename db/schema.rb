@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170226232440) do
+ActiveRecord::Schema.define(version: 20170308222442) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "plantings", force: :cascade do |t|
+    t.integer "plant_id"
+    t.string  "planting_type"
+    t.date    "planting_date_begin"
+    t.date    "planting_date_end"
+    t.integer "days_to_harvest_from"
+    t.integer "days_to_harvest_to"
+    t.index ["plant_id"], name: "index_plantings_on_plant_id", using: :btree
+  end
+
+  create_table "plants", force: :cascade do |t|
+    t.string  "name"
+    t.integer "distance_between_from"
+    t.integer "distance_between_to"
+  end
 
   create_table "readings", force: :cascade do |t|
     t.decimal  "value",       precision: 4, scale: 1
@@ -22,4 +38,5 @@ ActiveRecord::Schema.define(version: 20170226232440) do
     t.datetime "updated_at",                          null: false
   end
 
+  add_foreign_key "plantings", "plants"
 end
