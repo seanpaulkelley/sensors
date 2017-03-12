@@ -3,7 +3,17 @@ class PlantingsController < ApplicationController
 
   # GET /plantings
   def index
-    @plantings = Planting.this_week.includes(:plant)
+    if params[:week] == 'next_week'
+      @plantings = Planting.next_week.includes(:plant)
+    elsif params[:week] == 'last_week'
+      @plantings = Planting.last_week.includes(:plant)
+    elsif params[:week] == 'all'
+      @plantings = Planting.all
+    else
+      @plantings = Planting.this_week.includes(:plant)
+    end
+    #debugger
+    puts 'week: ' + params[:week].to_s
     render json: @plantings, include: %w(plant)
   end
 
@@ -45,6 +55,6 @@ class PlantingsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def planting_params
-      params.require(:planting).permit(:plant_id, :planting_type, :planting_date_begin, :planting_date_end, :days_to_harvest_from, :days_to_harvest_to,)
+      params.require(:planting).permit(:plant_id, :planting_type, :planting_date_begin, :planting_date_end, :days_to_harvest_from, :days_to_harvest_to)
     end
 end
