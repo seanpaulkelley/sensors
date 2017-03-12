@@ -1,9 +1,10 @@
 <li>
-  <strong>
-    <!-- {{moment-format planting.plantingDateBegin 'MMMM D'}} : --> {{plant.name}}</strong>
-  <br/>
-  {{planting.plantingType}} {{if planting.startIndoors 'Start Indoors:' 'Plant in Ground:'}} 
-   {{moment-format planting.plantingDateBegin 'MMMM D'}} - {{moment-format planting.plantingDateEnd 'MMMM D'}} HARVEST (days): {{ planting.daysToHarvestFrom }} - {{ planting.daysToHarvestTo }} Distance Between: {{ plant.distanceBetweenFrom }} - {{ plant.distanceBetweenTo }}
+  <h4>{{plant.name}}</h4>
+  {{planting.plantingType}}:  
+  {{if planting.startIndoors 'Start Seed Indoors:' 'Plant in Ground:'}} 
+  {{moment-format planting.plantingDateBegin 'MMMM D'}} - {{moment-format planting.plantingDateEnd 'MMMM D'}} 
+  Harvest In Days: {{ planting.daysToHarvestFrom }}{{if planting.daysToHarvestTo '-' }}{{ planting.daysToHarvestTo }} 
+  Distance Between: {{ plant.distanceBetweenFrom }} {{if plant.distanceBetweenTo '-' }} {{ plant.distanceBetweenTo }} in
   <br/>
   
 </li>

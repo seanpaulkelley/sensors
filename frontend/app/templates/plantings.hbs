@@ -1,9 +1,16 @@
 Vegetables, fruit, and herb planting dates for Central North Carolina.
-
+<hr>
+{{#link-to "plantings" (query-params week='last_week') class="btn btn-primary btn-sm" }}Last Week{{/link-to}}
+{{#link-to "plantings" (query-params week='this_week') class="btn btn-primary btn-sm" }}This Week{{/link-to}}
+{{#link-to "plantings" (query-params week='next_week') class="btn btn-primary btn-sm" }}Next Week{{/link-to}}
+{{#link-to "plantings" (query-params week='all') class="btn btn-primary btn-sm" }}All{{/link-to}}
+<hr>
+number of plantings = {{model.length}}
+<br/>
 <ul>
   {{#each model as |planting| }}
     {{ planting-item planting=planting plant=planting.plant }}
   {{/each}}
 </ul>
 
-Data provided by  @ <a href="https://content.ces.ncsu.edu/central-north-carolina-planting-calendar-for-annual-vegetables-fruits-and-herbs">NC State</a>
+Read more about planting at <a href="https://content.ces.ncsu.edu/central-north-carolina-planting-calendar-for-annual-vegetables-fruits-and-herbs">NC State</a>
