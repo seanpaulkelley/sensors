@@ -85,7 +85,7 @@ plants.each {|plant|
   end
 
   if p.name=='Arugula'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,2,1), planting_date_end: Date.new(2017,3,30), days_to_harvest_from: 40, days_to_harvest_to: 50, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,2,1), planting_date_end: Date.new(2017,3,31), days_to_harvest_from: 40, days_to_harvest_to: 50, plant_id: p.id)
     pp.save!
 
     pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,8,1), planting_date_end: Date.new(2017,9,30), days_to_harvest_from: 40, days_to_harvest_to: 50, plant_id: p.id)
@@ -98,15 +98,15 @@ plants.each {|plant|
   end 
 
   if p.name=='Basil'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,5,1), planting_date_end: Date.new(2017,7,30), days_to_harvest_from: 50, days_to_harvest_to: 75, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,5,1), planting_date_end: Date.new(2017,7,31), days_to_harvest_from: 50, days_to_harvest_to: 75, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,5,1), planting_date_end: Date.new(2017,7,30), days_to_harvest_from: 14, days_to_harvest_to: 35, plant_id: p.id)
+    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,5,1), planting_date_end: Date.new(2017,7,31), days_to_harvest_from: 14, days_to_harvest_to: 35, plant_id: p.id)
     pp.save!
   end
 
   if p.name=='Beans, lima/bush'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,4,15), planting_date_end: Date.new(2017,7,30), days_to_harvest_from: 65, days_to_harvest_to: 80, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,4,15), planting_date_end: Date.new(2017,7,31), days_to_harvest_from: 65, days_to_harvest_to: 80, plant_id: p.id)
     pp.save!
   end
 
@@ -140,19 +140,11 @@ plants.each {|plant|
     pp.save!
   end
 
-  if p.name=='Broccoli'
-    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,2,15), planting_date_end: Date.new(2017,4,15), days_to_harvest_from: 70, days_to_harvest_to: 80, plant_id: p.id)
-    pp.save!
-
-    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,8,1), planting_date_end: Date.new(2017,9,15), days_to_harvest_from: 70, days_to_harvest_to: 80, plant_id: p.id)
-    pp.save!
-  end
-    
   if p.name=='Brussel Sprouts'
-    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,7,1), planting_date_end: Date.new(2017,8,30), days_to_harvest_from: 40, days_to_harvest_to: 50, plant_id: p.id)
+    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,7,1), planting_date_end: Date.new(2017,8,31), days_to_harvest_from: 40, days_to_harvest_to: 50, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,7,1), planting_date_end: Date.new(2017,8,30), days_to_harvest_from: 90, days_to_harvest_to: 100, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,5,1), planting_date_end: Date.new(2017,6,30), days_to_harvest_from: 90, days_to_harvest_to: 100, start_indoors: true, plant_id: p.id)
     pp.save!   
   end 
 
@@ -160,26 +152,33 @@ plants.each {|plant|
     pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,2,1), planting_date_end: Date.new(2017,4,15), days_to_harvest_from: 63, days_to_harvest_to: 75, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,7,1), planting_date_end: Date.new(2017,8,30), days_to_harvest_from: 90, days_to_harvest_to: 120, plant_id: p.id)
-    pp.save!   
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,12,1), planting_date_end: Date.new(2017,2,15), days_to_harvest_from: 90, days_to_harvest_to: 120, start_indoors: true, plant_id: p.id)
+    pp.save!
+
+    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,7,1), planting_date_end: Date.new(2017,8,31), days_to_harvest_from: 63, days_to_harvest_to: 75, plant_id: p.id)
+    pp.save!  
+
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,5,1), planting_date_end: Date.new(2017,6,30), days_to_harvest_from: 90, days_to_harvest_to: 120, start_indoors:true, plant_id: p.id)
+    pp.save!
+ 
   end 
 
   if p.name=='Cabbage, Chinese'
-    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,3,15), planting_date_end: Date.new(2017,3,30), days_to_harvest_from: 45, days_to_harvest_to: 55, plant_id: p.id)
+    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,3,15), planting_date_end: Date.new(2017,3,31), days_to_harvest_from: 45, days_to_harvest_to: 55, plant_id: p.id)
     pp.save!
 
     pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,9,15), planting_date_end: Date.new(2017,10,15), days_to_harvest_from: 45, days_to_harvest_to: 55, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,3,15), planting_date_end: Date.new(2017,3,30), days_to_harvest_from: 90, days_to_harvest_to: 120, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,3,15), planting_date_end: Date.new(2017,3,31), days_to_harvest_from: 90, days_to_harvest_to: 120, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,8,1), planting_date_end: Date.new(2017,8,30), days_to_harvest_from: 90, days_to_harvest_to: 120, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,8,1), planting_date_end: Date.new(2017,8,31), days_to_harvest_from: 90, days_to_harvest_to: 120, plant_id: p.id)
     pp.save!        
   end  
 
   if p.name=='Carrots'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,2,1), planting_date_end: Date.new(2017,3,30), days_to_harvest_from: 75, days_to_harvest_to: 80, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,2,1), planting_date_end: Date.new(2017,3,31), days_to_harvest_from: 75, days_to_harvest_to: 80, plant_id: p.id)
     pp.save!
 
     pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,7,15), planting_date_end: Date.new(2017,9,15), days_to_harvest_from: 75, days_to_harvest_to: 80, plant_id: p.id)
@@ -201,13 +200,13 @@ plants.each {|plant|
   end      
 
   if p.name=='Celery'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,2,15), planting_date_end: Date.new(2017,3,30), days_to_harvest_from: 120, days_to_harvest_to: 150, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,12,15), planting_date_end: Date.new(2017,1,31), days_to_harvest_from: 120, days_to_harvest_to: 150, start_indoors:true, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,6,15), planting_date_end: Date.new(2017,8,15), days_to_harvest_from: 120, days_to_harvest_to: 150, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,4,15), planting_date_end: Date.new(2017,6,15), days_to_harvest_from: 120, days_to_harvest_to: 150, start_indoors:true, plant_id: p.id)
     pp.save! 
 
-    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,2,15), planting_date_end: Date.new(2017,3,30), days_to_harvest_from: 40, days_to_harvest_to: 50, plant_id: p.id)
+    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,2,15), planting_date_end: Date.new(2017,3,31), days_to_harvest_from: 40, days_to_harvest_to: 50, plant_id: p.id)
     pp.save!
 
     pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,6,15), planting_date_end: Date.new(2017,8,15), days_to_harvest_from: 40, days_to_harvest_to: 50, plant_id: p.id)
@@ -229,7 +228,7 @@ plants.each {|plant|
   end  
 
   if p.name=='Cilantro'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,2,1), planting_date_end: Date.new(2017,3,30), days_to_harvest_from: 50, days_to_harvest_to: 55, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,2,1), planting_date_end: Date.new(2017,3,31), days_to_harvest_from: 50, days_to_harvest_to: 55, plant_id: p.id)
     pp.save!
 
     pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,9,15), planting_date_end: Date.new(2017,9,30), days_to_harvest_from: 50, days_to_harvest_to: 55, plant_id: p.id)
@@ -250,7 +249,7 @@ plants.each {|plant|
   end  
 
   if p.name=='Corn, sweet'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,3,15), planting_date_end: Date.new(2017,5,30), days_to_harvest_from: 85, days_to_harvest_to: 90, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,3,15), planting_date_end: Date.new(2017,5,31), days_to_harvest_from: 85, days_to_harvest_to: 90, plant_id: p.id)
     pp.save
   end
 
@@ -263,7 +262,7 @@ plants.each {|plant|
   end
 
   if p.name=='Dill'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,3,15), planting_date_end: Date.new(2017,3,30), days_to_harvest_from: 40, days_to_harvest_to: 55, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,3,15), planting_date_end: Date.new(2017,3,31), days_to_harvest_from: 40, days_to_harvest_to: 55, plant_id: p.id)
     pp.save!
 
     pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,8,1), planting_date_end: Date.new(2017,9,15), days_to_harvest_from: 40, days_to_harvest_to: 55, plant_id: p.id)
@@ -271,16 +270,16 @@ plants.each {|plant|
   end  
 
   if p.name=='Eggplant'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,4,15), planting_date_end: Date.new(2017,6,15), days_to_harvest_from: 150, days_to_harvest_to: 155, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,2,15), planting_date_end: Date.new(2017,4,15), days_to_harvest_from: 150, days_to_harvest_to: 155, start_indoors:true, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,8,1), planting_date_end: Date.new(2017,8,30), days_to_harvest_from: 150, days_to_harvest_to: 155, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,6,1), planting_date_end: Date.new(2017,6,30), days_to_harvest_from: 150, days_to_harvest_to: 155, start_indoors:true, plant_id: p.id)
     pp.save!
 
     pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,4,15), planting_date_end: Date.new(2017,6,15), days_to_harvest_from: 90, days_to_harvest_to: 95, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,8,1), planting_date_end: Date.new(2017,8,30), days_to_harvest_from: 90, days_to_harvest_to: 95, plant_id: p.id)
+    pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,8,1), planting_date_end: Date.new(2017,8,31), days_to_harvest_from: 90, days_to_harvest_to: 95, plant_id: p.id)
     pp.save!          
   end  
 
@@ -288,7 +287,7 @@ plants.each {|plant|
     pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,3,15), planting_date_end: Date.new(2017,4,30), days_to_harvest_from: 60, days_to_harvest_to: 90, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,7,1), planting_date_end: Date.new(2017,8,30), days_to_harvest_from: 60, days_to_harvest_to: 90, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,7,1), planting_date_end: Date.new(2017,8,31), days_to_harvest_from: 60, days_to_harvest_to: 90, plant_id: p.id)
     pp.save!
   end
   
@@ -397,7 +396,7 @@ plants.each {|plant|
   end   
 
   if p.name=='Onions, bulb'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,1,1), planting_date_end: Date.new(2017,3,30), days_to_harvest_from: 90, days_to_harvest_to: 120, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,1,1), planting_date_end: Date.new(2017,3,31), days_to_harvest_from: 90, days_to_harvest_to: 120, plant_id: p.id)
     pp.save!
 
     pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,8,1), planting_date_end: Date.new(2017,12,31), days_to_harvest_from: 90, days_to_harvest_to: 120, plant_id: p.id)
@@ -423,10 +422,10 @@ plants.each {|plant|
   end 
 
   if p.name=='Pac choi/bok choy'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,3,15), planting_date_end: Date.new(2017,4,1), days_to_harvest_from: 45, days_to_harvest_to: 90, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,1,15), planting_date_end: Date.new(2017,2,1), days_to_harvest_from: 45, days_to_harvest_to: 90, start_indoors:true, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,8,15), planting_date_end: Date.new(2017,9,30), days_to_harvest_from: 45, days_to_harvest_to: 90, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,6,15), planting_date_end: Date.new(2017,7,31), days_to_harvest_from: 45, days_to_harvest_to: 90, start_indoors:true, plant_id: p.id)
     pp.save!
 
     pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,3,15), planting_date_end: Date.new(2017,4,1), days_to_harvest_from: 30, days_to_harvest_to: 75, plant_id: p.id)
@@ -489,10 +488,10 @@ plants.each {|plant|
   end
 
   if p.name=='Peppers'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,4,15), planting_date_end: Date.new(2017,6,15), days_to_harvest_from: 145, days_to_harvest_from: 150, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,2,15), planting_date_end: Date.new(2017,4,15), days_to_harvest_from: 145, days_to_harvest_from: 150, start_indoors:true, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,8,1), planting_date_end: Date.new(2017,8,15), days_to_harvest_from: 145, days_to_harvest_from: 150, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,6,1), planting_date_end: Date.new(2017,6,15), days_to_harvest_from: 145, days_to_harvest_from: 150, start_indoors:true, plant_id: p.id)
     pp.save!
 
     pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,4,15), planting_date_end: Date.new(2017,6,15), days_to_harvest_from: 75, days_to_harvest_from: 80, plant_id: p.id)
@@ -563,10 +562,10 @@ plants.each {|plant|
   end 
 
   if p.name=='Tomatoes'
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,4,15), planting_date_end: Date.new(2017,7,15), days_to_harvest_from: 125, days_to_harvest_from: 135, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,2,15), planting_date_end: Date.new(2017,5,15), days_to_harvest_from: 125, days_to_harvest_from: 135, start_indoors:true, plant_id: p.id)
     pp.save!
 
-    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,8,1), planting_date_end: Date.new(2017,8,15), days_to_harvest_from: 125, days_to_harvest_from: 135, plant_id: p.id)
+    pp = Planting.create(planting_type: 'seed', planting_date_begin: Date.new(2017,6,1), planting_date_end: Date.new(2017,6,15), days_to_harvest_from: 125, days_to_harvest_from: 135, start_indoors:true, plant_id: p.id)
     pp.save!
 
     pp = Planting.create(planting_type: 'transplant', planting_date_begin: Date.new(2017,4,15), planting_date_end: Date.new(2017,7,15), days_to_harvest_from: 75, days_to_harvest_from: 85, plant_id: p.id)

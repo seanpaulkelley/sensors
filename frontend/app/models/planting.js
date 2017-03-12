@@ -9,5 +9,6 @@ export default DS.Model.extend({
   distanceBetweenTo: DS.attr('number'),
   daysToHarvestFrom: DS.attr('number'),
   daysToHarvestTo: DS.attr('number'),
+  startIndoors: DS.attr('boolean'),
   plantId: DS.attr('number')
 });

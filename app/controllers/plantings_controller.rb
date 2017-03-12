@@ -3,7 +3,7 @@ class PlantingsController < ApplicationController
 
   # GET /plantings
   def index
-    @plantings = Planting.all.includes(:plant)
+    @plantings = Planting.this_week.includes(:plant)
     render json: @plantings, include: %w(plant)
   end
 

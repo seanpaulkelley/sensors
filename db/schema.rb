@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170308222442) do
+ActiveRecord::Schema.define(version: 20170312115212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20170308222442) do
     t.date    "planting_date_end"
     t.integer "days_to_harvest_from"
     t.integer "days_to_harvest_to"
+    t.boolean "start_indoors"
     t.index ["plant_id"], name: "index_plantings_on_plant_id", using: :btree
   end
 
