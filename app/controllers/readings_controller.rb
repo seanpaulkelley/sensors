@@ -4,7 +4,7 @@ class ReadingsController < ApplicationController
   # GET /readings
   def index
     if params[:sensor_type] 
-      @readings=Reading.where(:sensor_type => params[:sensor_type]).where("created_at > ?", 1.day.ago)
+      @readings=Reading.where(:sensor_type => params[:sensor_type]).where("created_at > ?", 1.day.ago).order(created_at: :desc)
     else
       @readings = Reading.all
     end
