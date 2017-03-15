@@ -8,6 +8,16 @@
 
 require 'date'
 
+a=Reading.create(value: 55.0, sensor_type: 'soil', created_at: Time.now)
+a.save!
+b=Reading.create(value: 60.5, sensor_type: 'soil', created_at: Time.now + 1.hour)
+b.save!
+c=Reading.create(value: 65.0, sensor_type: 'soil', created_at: Time.now + 2.hours)
+c.save!
+d=Reading.create(value: 70.1, sensor_type: 'soil', created_at: Time.now + 3.hours)
+d.save!
+
+=begin
 Plant.destroy_all
 Planting.destroy_all
 
@@ -583,3 +593,4 @@ plants.each {|plant|
     pp.save!               
   end          
 }
+=end

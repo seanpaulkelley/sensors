@@ -24,9 +24,12 @@ export default Ember.Controller.extend({
                 time: {
                     displayFormats: {
                         hour:'MM/DD/YY HH:MM'
-                    }//,
-                //unit: 'minute'   
-                }
+                    },
+                unit: 'hour'   
+                },
+                tick: {
+                  autoSkip: true
+                } 
             }]
         }
   }
