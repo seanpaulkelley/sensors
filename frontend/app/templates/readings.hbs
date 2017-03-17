@@ -12,6 +12,11 @@
    Select both start and end dates 
    <div class="col-xs-6 col-md-6"> start: {{bs-datetimepicker autoclose=true valueFormat="YYYY-MM-DDTHH:mm:ssZ" format="YYYY-MM-DDTHH:mm:ssZ" utc=true date=startDateToJSDate }} </div>
   <div class="col-xs-6 col-md-6"> end: {{bs-datetimepicker autoclose=true format="YYYY-MM-DDTHH:mm:ssZ" utc=true date=endDateToJSDate }} </div>
+
+<div class="col-xs-6 col-md-4"> 
+  <button class="btn btn-primary btn-sm" {{action 'resetSearch'}}>Reset (last 24 hrs)</button>
+</div> 
+
 <!--
 <div class="col-xs-6 col-md-4"> 
   {{#link-to "readings" (query-params sensor_type=sensor_type startDate=sDate endDate=endDateToJSDate) class="btn btn-primary btn-sm" action="dateSearch"}}Search{{/link-to}}

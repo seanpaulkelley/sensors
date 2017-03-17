@@ -64,7 +64,12 @@ export default Ember.Controller.extend({
  actions: {
     searchOn() {
      this.set('dateSearch', true);
+    },
+    resetSearch() {
+     this.set('startDate', '');
+     this.set('endDate', '');
     }
+
   }
 
 });

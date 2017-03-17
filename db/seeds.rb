@@ -8,6 +8,16 @@
 
 require 'date'
 
+Reading.destroy_all
+i=2
+while i < 50 do
+  f=Reading.create(value: 55.0 + i, sensor_type: 'soil', created_at: Time.now + i.hours)
+  f.save
+  p=Reading.create(value: 55.0-i, sensor_type: 'soil', created_at: Time.now - i.hours)
+  p.save
+  i+=1
+end
+=begin
 a=Reading.create(value: 55.0, sensor_type: 'soil', created_at: Time.now)
 a.save!
 b=Reading.create(value: 60.5, sensor_type: 'soil', created_at: Time.now + 1.hour)
@@ -16,6 +26,7 @@ c=Reading.create(value: 65.0, sensor_type: 'soil', created_at: Time.now + 2.hour
 c.save!
 d=Reading.create(value: 70.1, sensor_type: 'soil', created_at: Time.now + 3.hours)
 d.save!
+=end
 
 =begin
 Plant.destroy_all
