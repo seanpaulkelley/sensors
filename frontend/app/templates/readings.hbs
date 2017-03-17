@@ -10,11 +10,12 @@
 <div class="row vertical-align">
   <!-- 2017-03-16 07:30:06.436632 -->
    Select both start and end dates 
-   <div class="col-xs-6 col-md-6"> start: {{bs-datetimepicker autoclose=true valueFormat="YYYY-MM-DDTHH:mm:ssZ" format="YYYY-MM-DDTHH:mm:ssZ" utc=true date=startDateToJSDate }} </div>
-  <div class="col-xs-6 col-md-6"> end: {{bs-datetimepicker autoclose=true format="YYYY-MM-DDTHH:mm:ssZ" utc=true date=endDateToJSDate }} </div>
+   <div class="col-xs-6 col-md-6"> start: {{bs-datetimepicker autoclose=true date=startDateToJSDate }} </div>
+  <div class="col-xs-6 col-md-6"> end: {{bs-datetimepicker autoclose=true date=endDateToJSDate }} </div>
 
-<div class="col-xs-6 col-md-4"> 
-  <button class="btn btn-primary btn-sm" {{action 'resetSearch'}}>Reset (last 24 hrs)</button>
+
+<div class="col-xs-6 col-md-4 {{if endDate "show" "hidden"}}">
+    <button class="btn btn-primary btn-sm" {{action 'resetSearch'}}>Reset (last 24 hrs)</button>
 </div> 
 
 <!--
