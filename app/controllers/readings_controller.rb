@@ -3,10 +3,16 @@ class ReadingsController < ApplicationController
 
   # GET /readings
   def index
-    if params[:sensor_type] 
-      @readings=Reading.where(:sensor_type => params[:sensor_type]).where("created_at > ?", 1.day.ago).order(created_at: :desc)
+
+    if params[:sensor_type] and !params[:startDate].blank? and !params[:endDate].blank?
+      puts '*************HELLO'
+      startd = params[:startDate].to_datetime.strftime('%a, %d %b %Y %H:%M:%S')
+      endd = params[:endDate].to_datetime.strftime('%a, %d %b %Y %H:%M:%S')
+      @readings=Reading.where(:sensor_type => params[:sensor_type]).where("created_at >= ? AND created_at <= ?", startd, endd).order(created_at: :desc)
+      #.where("created_at > ?", 1.day.ago)
     else
-      @readings = Reading.all
+      @readings=Reading.where(:sensor_type => params[:sensor_type]).where("created_at >= ? ", 24.hours.ago).order(created_at: :desc)
+      #@readings = Reading.where("created_at >= ?", 24.hours.ago).order(created_at: :desc)
     end
    
     render json: @readings

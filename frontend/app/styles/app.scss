@@ -49,3 +49,10 @@ a.author {
   filter: blur(3px);
   -webkit-filter: blur(3px);
 }
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}

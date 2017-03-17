@@ -2,12 +2,24 @@
 
 {{#link-to "readings" (query-params sensor_type='air') class="btn btn-primary btn-sm" }}Air Temp (outside){{/link-to}}
 {{#link-to "readings" (query-params sensor_type='soil') class="btn btn-primary btn-sm" }}Soil Temp (worms){{/link-to}}
-{{#link-to "readings" (query-params sensor_type='grafting-humidity') class="btn btn-primary btn-sm" }}Grafting Humidity{{/link-to}}
+{{#link-to "readings" (query-params sensor_type='grafting-humidity') class="btn btn-primary btn-sm" }}Grafting Humidity{{/link-to}} 
 {{#link-to "readings" (query-params sensor_type='grafting-temperature') class="btn btn-primary btn-sm" }}Grafting Temp{{/link-to}}
 
 {{ember-chart type='line' data=valueData width=200 height=200 options=lineOptions}}
+<br/>
+<div class="row vertical-align">
+  <!-- 2017-03-16 07:30:06.436632 -->
+   Select both start and end dates 
+   <div class="col-xs-6 col-md-6"> start: {{bs-datetimepicker autoclose=true valueFormat="YYYY-MM-DDTHH:mm:ssZ" format="YYYY-MM-DDTHH:mm:ssZ" utc=true date=startDateToJSDate }} </div>
+  <div class="col-xs-6 col-md-6"> end: {{bs-datetimepicker autoclose=true format="YYYY-MM-DDTHH:mm:ssZ" utc=true date=endDateToJSDate }} </div>
+<!--
+<div class="col-xs-6 col-md-4"> 
+  {{#link-to "readings" (query-params sensor_type=sensor_type startDate=sDate endDate=endDateToJSDate) class="btn btn-primary btn-sm" action="dateSearch"}}Search{{/link-to}}
+</div> 
+-->
 
-
+</div>
+<br/>
 <ul>
   {{#each model as |reading|}}
     {{reading-item reading=reading}}
