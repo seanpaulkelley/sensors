@@ -55,7 +55,8 @@ export default Ember.Controller.extend({
                 unit: 'hour'   
                 },
                 tick: {
-                  autoSkip: true
+                  autoSkip: true,
+                  maxTicksLimit: 20
                 } 
             }]
         }
