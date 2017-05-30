@@ -4,6 +4,8 @@
 {{#link-to "readings" (query-params sensor_type='soil') class="btn btn-primary btn-sm" }}Soil Temp (worms){{/link-to}}
 {{#link-to "readings" (query-params sensor_type='grafting-humidity') class="btn btn-primary btn-sm" }}Grafting Humidity{{/link-to}} 
 {{#link-to "readings" (query-params sensor_type='grafting-temperature') class="btn btn-primary btn-sm" }}Grafting Temp{{/link-to}}
+{{#link-to "readings" (query-params sensor_type='root-cellar-1-humidity') class="btn btn-primary btn-sm" }}Root Cellar Humidity{{/link-to}} 
+{{#link-to "readings" (query-params sensor_type='root-cellar-1-temperature') class="btn btn-primary btn-sm" }}Root Cellar Temp{{/link-to}}
 
 {{ember-chart type='line' data=valueData width=200 height=200 options=lineOptions}}
 <br/>
