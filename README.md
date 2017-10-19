@@ -9,7 +9,7 @@ Steps to get setup:
 
 * This go me going setting up the rails <=> ember communication @ https://emberigniter.com/modern-bridge-ember-and-rails-5-with-json-api/
 
-* However, I wanted an integrated rails/ember evironment as oppsed to two separate projects so I used the ember-cli-rails gem @ https://github.com/thoughtbot/ember-cli-rails.
+* However, I wanted an integrated rails/ember evironment as opposed to two separate projects so I used the ember-cli-rails gem @ https://github.com/thoughtbot/ember-cli-rails.
 
 Demo project can be found at http://growtime.herokuapp.com  
 
