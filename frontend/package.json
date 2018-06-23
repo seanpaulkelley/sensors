@@ -56,8 +56,5 @@
   "engines": {
     "node": ">= 0.12.0"
   },
-  "private": true,
-  "dependencies": {
-    "dezalgo": "^1.0.3"
-  }
+  "private": true
 }
